@@ -55,5 +55,3 @@ if ~isempty(optimal_c2_idx)
 else
     fprintf('No damping coefficient c2 found such that the amplitude at the driver position does not exceed 4 cm.\n');
 end
-
-fprintf('The smallest damping coefficient c2 such that the amplitude at the driver position does not exceed 4 cm is %.2f kNs/m\n', optimal_c2 / 1e3);

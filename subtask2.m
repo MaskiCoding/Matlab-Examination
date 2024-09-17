@@ -8,8 +8,8 @@ M = diag([m1, m2, m3, J]);
 % Stiffness matrix
 K = [k1+k2, -k2, -k3, (1-p)*L*k2;
     -k2, k2, 0, -p*L*k2;
-    -k3, 0, k3, -p*L*k3;
-    (1-p)*L*k2, -p*L*k2, -p*L*k3, (p*L)^2*k2 + (1-p)*L*k3];
+    -k3, 0, k3, 0;
+    (1-p)*L*k2, -p*L*k2, 0, (p*L)^2*k2 + (1-p)*L*k3];
 
 % Eigenvalue problem
 [eigenvectors, eigenvalues] = eig(K, M);
